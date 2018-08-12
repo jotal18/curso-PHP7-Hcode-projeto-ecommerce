@@ -30,6 +30,8 @@ class Page
 
 		$this->tpl = new Tpl;
 
+		$this->tpl->assign("user", $_SESSION["User"]);
+
 		$this->setData($this->options['data']);
 
 		if($this->options["header"] === true) $this->tpl->draw("header");
